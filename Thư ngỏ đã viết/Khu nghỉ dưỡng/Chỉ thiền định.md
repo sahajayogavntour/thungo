@@ -1,0 +1,43 @@
+# Thư đề xuất phối hợp cung cấp Hoạt động “Thiền Tĩnh lặng hòa mình cùng Thiên nhiên” (Mindful Nature Session) cho Khách lưu trú
+ 
+ **Thời lượng dự kiến:** 45 - 60 phút  
+ **Ảnh hoạt động gợi ý:** `images/sy_resort.png`  
+ 
+ ---
+ 
+ Kính gửi: Ban Giám đốc / Trưởng Bộ phận Chăm sóc Khách hàng [Tên Resort]
+
+Lời đầu tiên, Sahaja Yoga Việt Nam xin gửi lời chào trân trọng và lời chúc phát triển thịnh vượng đến Quý Resort!
+
+Một khu nghỉ dưỡng cao cấp luôn đi kèm với những dịch vụ mang lại sự tĩnh lặng tuyệt đối cho tâm hồn du khách. Để đa dạng hóa các hoạt động trải nghiệm Wellness tĩnh lặng, giúp khách lưu trú tận hưởng trọn vẹn không gian thiên nhiên thanh bình của resort, Sahaja Yoga Việt Nam trân trọng đề xuất phối hợp tổ chức hoạt động thường niên hoặc định kỳ: “Thiền Tĩnh lặng hòa mình cùng Thiên nhiên” (Mindful Nature Session).
+
+Đây là hoạt động thiền ứng dụng chất lượng cao, hoàn toàn MIỄN PHÍ dành riêng cho du khách của Resort:
+- Hướng dẫn du khách phương pháp thiền Sahaja Yoga tinh tế, giúp họ tạm thời ngắt kết nối với các thiết bị công nghệ và những lo toan cuộc sống để quay về kết nối với chính mình.
+- Tận dụng tối đa không gian thiên nhiên trong lành của resort (bãi biển, bãi cỏ xanh, sàn gỗ ngoài trời) để thực hiện các bài tập mở rộng giác quan, lắng nghe tiếng sóng, tiếng gió nhằm đưa tâm trí về trạng thái cân bằng hoàn hảo.
+- Trải nghiệm luồng gió mát lành từ lòng bàn tay và đỉnh đầu - minh chứng của sự thông suốt năng lượng, giúp cơ thể phục hồi sức khỏe tự nhiên.
+
+Chúng tôi sẽ phụ trách toàn bộ việc lên chương trình và cung cấp huấn luyện viên thiền chuyên nghiệp (có thể hướng dẫn bằng cả tiếng Anh và tiếng Việt cho khách quốc tế).
+
+Thời gian: Buổi sáng sớm (6:00 - 7:00) hoặc hoàng hôn (17:00 - 18:00) theo lịch trình của Resort.
+Địa điểm: Không gian mở ngoài trời yên tĩnh trong resort.
+
+Rất mong có cơ hội hợp tác cùng Quý Resort để mang lại những trải nghiệm chữa lành sâu sắc cho du khách.
+
+Xin trân trọng cảm ơn!
+
+Đại diện Sahaja Yoga Việt Nam
+[Tên và Số điện thoại liên hệ]
+ 
+ ---
+ 
+ 
+### Khung chương trình dự kiến:
+| Thời lượng | Nội dung chi tiết |
+| --- | --- |
+| 05 phút | Đón tiếp du khách tại khu vực thiền, hướng dẫn tư thế ngồi thoải mái trên thảm yoga. |
+| 15 phút | Bài tập hít thở kết nối giác quan với thiên nhiên (tiếng chim hót, gió thổi, mùi cỏ cây). |
+| 20 phút | Hướng dẫn thiền Sahaja Yoga đánh thức năng lượng Kundalini giúp làm dịu hoàn toàn suy nghĩ. |
+| 15 phút | Trải nghiệm cảm nhận sự mát mẻ của dòng năng lượng trên các đầu ngón tay và đỉnh đầu. |
+| 05 phút | Uống trà thảo mộc nhẹ, chia sẻ trải nghiệm bình an và kết thúc buổi thiền. |
+
+ 

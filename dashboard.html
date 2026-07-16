@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahaja Yoga Việt Nam - Quản lý Thư ngỏ & Chương trình</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #131b2e;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #f59e0b; /* Amber Gold */
+            --accent-hover: #d97706;
+            --accent-glow: rgba(245, 158, 11, 0.15);
+            --success-color: #10b981; /* Emerald */
+            --success-glow: rgba(16, 185, 129, 0.2);
+            --border-color: #334155;
+            --font-display: 'Outfit', 'Inter', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .logo-section h1 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-section p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .status-badge {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+            border: 1px solid var(--success-glow);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--success-color);
+        }
+
+        /* Controls Section */
+        .controls-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Tab Navigation */
+        .tabs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            border-color: var(--accent-color);
+            background-color: rgba(245, 158, 11, 0.05);
+        }
+
+        .tab-btn.active {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            border-color: var(--accent-color);
+            font-weight: 600;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        /* Program Type Selector */
+        .type-selector-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .type-toggle-group {
+            display: flex;
+            background-color: var(--bg-primary);
+            padding: 0.3rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .type-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .type-btn:hover {
+            color: var(--text-main);
+        }
+
+        .type-btn.active {
+            background-color: var(--bg-card);
+            color: var(--accent-color);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .meta-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .meta-duration strong {
+            color: var(--accent-color);
+        }
+
+        /* Main Workspace Grid */
+        .workspace-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1024px) {
+            .workspace-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Letter Preview Column */
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .letter-title-wrapper {
+            flex-grow: 1;
+        }
+
+        .letter-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .letter-subject {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .btn-copy {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition-speed) ease;
+            white-space: nowrap;
+        }
+
+        .btn-copy:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .btn-copy.success {
+            background-color: var(--success-color);
+            color: var(--text-main);
+            border-color: var(--success-color);
+            box-shadow: 0 4px 12px var(--success-glow);
+        }
+
+        .letter-body-container {
+            flex-grow: 1;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-y: auto;
+            max-height: 550px;
+            font-size: 0.95rem;
+            white-space: pre-wrap;
+            color: #cbd5e1;
+        }
+
+        /* Placeholders highlighting inside text */
+        .placeholder-hl {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: var(--accent-color);
+            border-bottom: 1px dashed var(--accent-color);
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* Media and Program Agenda Column */
+        .media-agenda-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .image-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            background-color: var(--bg-primary);
+            transition: transform 0.5s ease;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .image-overlay-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11, 15, 25, 0.9) 0%, rgba(11, 15, 25, 0) 100%);
+            padding: 1.5rem 1.5rem 1rem;
+        }
+
+        .image-overlay-title h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .image-overlay-title p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Agenda Card */
+        .agenda-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .agenda-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .agenda-card h3 span {
+            font-size: 0.8rem;
+            background-color: var(--bg-card);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .agenda-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .agenda-table th {
+            text-align: left;
+            padding: 0.75rem 0.5rem;
+            color: var(--text-muted);
+            border-bottom: 2px solid var(--border-color);
+            font-weight: 600;
+        }
+
+        .agenda-table td {
+            padding: 0.85rem 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: top;
+        }
+
+        .agenda-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .agenda-time {
+            font-weight: 600;
+            color: var(--accent-color);
+            white-space: nowrap;
+            width: 100px;
+        }
+
+        .agenda-desc {
+            color: #e2e8f0;
+        }
+
+
+
+        /* Suggested Contacts Styles */
+        .contacts-filter-bar {
+            display: flex;
+            gap: 1.5rem;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .filter-group select, .filter-group input {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            outline: none;
+            min-width: 180px;
+            transition: border-color var(--transition-speed);
+        }
+
+        .filter-group select:focus, .filter-group input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .search-group {
+            flex-grow: 1;
+        }
+
+        .search-group input {
+            width: 100%;
+        }
+
+        .suggested-contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .suggested-contact-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+            transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        }
+
+        .suggested-contact-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px -10px rgba(245, 158, 11, 0.1);
+        }
+
+        .sc-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .sc-city-badge {
+            background-color: var(--accent-glow);
+            color: var(--accent-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .sc-cat-badge {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .sc-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 0.25rem;
+        }
+
+        .sc-info-item {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            color: #cbd5e1;
+        }
+
+        .sc-info-item svg {
+            color: var(--accent-color);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .sc-info-item strong {
+            color: var(--text-muted);
+            min-width: 60px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-top: 0.1rem;
+        }
+
+        .sc-info-item a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--text-muted);
+            transition: color var(--transition-speed);
+        }
+
+        .sc-info-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .sc-notes {
+            margin-top: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-style: italic;
+            border-top: 1px dashed rgba(255, 255, 255, 0.05);
+            padding-top: 0.75rem;
+            line-height: 1.4;
+        }
+
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform var(--transition-speed), border-color var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            aspect-ratio: 1 / 1;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            border-color: var(--accent-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.4) 70%, rgba(11, 15, 25, 0) 100%);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+
+        .gallery-item:hover .gallery-item-actions {
+            opacity: 1;
+        }
+
+        .btn-gallery-download {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            border: none;
+            padding: 0.4rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color var(--transition-speed);
+        }
+
+        .btn-gallery-download:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .gallery-img-name {
+            font-size: 0.75rem;
+            color: var(--text-main);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 130px;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" style="display: flex; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #0b0f19; z-index: 9999; font-family: 'Inter', sans-serif;">
+        <div style="background-color: #1e293b; border: 1px solid #334155; padding: 2.5rem; border-radius: 16px; width: 90%; max-width: 400px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🌸</div>
+            <h2 style="color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 700;">Hệ Thống Thư Ngỏ SY</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem;">Vui lòng nhập mật khẩu để truy cập hệ thống</p>
+            
+            <form id="loginForm" onsubmit="handleLogin(event)" style="display: flex; flex-direction: column; gap: 1rem;">
+                <input type="password" id="passwordInput" placeholder="Mật khẩu..." required 
+                    style="background-color: #0b0f19; border: 1px solid #334155; color: #ffffff; padding: 0.75rem 1rem; border-radius: 8px; font-size: 1rem; outline: none; width: 100%; text-align: center; transition: border-color 0.2s;">
+                <button type="submit" 
+                    style="background-color: #f59e0b; color: #0b0f19; border: none; padding: 0.75rem; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s; width: 100%;">
+                    Đăng Nhập
+                </button>
+                <p id="loginError" style="color: #ef4444; font-size: 0.85rem; margin-top: 0.5rem; display: none;">Mật khẩu không chính xác. Vui lòng thử lại!</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="appContainer" style="display: none; width: 100%;">
+        <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-section">
+                <h1>Sahaja Yoga Việt Nam</h1>
+                <p>Hệ thống Quản lý & Biên tập Thư ngỏ Chương trình Cộng đồng</p>
+            </div>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>CSDL Đang Hoạt Động (SQLite)</span>
+            </div>
+        </header>
+
+        <!-- Controls Card (Category & Type Selector) -->
+        <div class="controls-card">
+            <!-- Tabs Categories -->
+            <div class="tabs-container" id="categoryTabs">
+                <!-- Javascript will inject categories here -->
+            </div>
+
+            <!-- Program Type Selection & Duration -->
+            <div class="type-selector-wrapper">
+                <div class="type-toggle-group" id="typeToggle">
+                    <button class="type-btn active" data-type="music_meditation">Có âm nhạc & Thiền</button>
+                    <button class="type-btn" data-type="meditation_only">Chỉ tập trung Thiền</button>
+                </div>
+                <div class="meta-duration" id="durationBadge">
+                    Thời lượng dự kiến: <strong id="durationVal">60 - 90 phút</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workspace Grid -->
+        <div class="workspace-grid" id="letterWorkspace">
+            <!-- Left: Letter Preview -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="letter-title-wrapper">
+                        <span class="letter-label" id="letterLabel">Trường Học (Đại Học/Phổ Thông)</span>
+                        <h2 class="letter-subject" id="letterSubject">Tiêu đề thư ngỏ...</h2>
+                    </div>
+                    <button class="btn-copy" id="btnCopy">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <span>Sao chép thư ngỏ</span>
+                    </button>
+                </div>
+                <div class="letter-body-container" id="letterBody">
+                    <!-- Text body will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Right: Media & Agenda -->
+            <div class="media-agenda-column">
+                <!-- Image card -->
+                <div class="image-card">
+                    <img id="activityImg" src="images/sy_school.png" alt="Sahaja Yoga Activity">
+                    <div class="image-overlay-title">
+                        <h3 id="imageCaption">Hoạt động thiền tại trường học</h3>
+                        <p>Ảnh minh họa thực tế được tạo bằng trí tuệ nhân tạo (AI)</p>
+                    </div>
+                </div>
+
+                <!-- Agenda Card -->
+                <div class="agenda-card">
+                    <h3>Khung chương trình <span id="agendaTypeBadge">Có âm nhạc & Thiền</span></h3>
+                    <table class="agenda-table">
+                        <thead>
+                            <tr>
+                                <th>Thời gian</th>
+                                <th>Nội dung chi tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody id="agendaBody">
+                            <!-- Agenda items will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suggested Contacts Workspace -->
+        <div id="suggestedContactsWorkspace" style="display: none; margin-top: 1rem;">
+            <div class="contacts-filter-bar">
+                <div class="filter-group">
+                    <label for="cityFilter">Thành phố:</label>
+                    <select id="cityFilter">
+                        <option value="all">Tất cả thành phố</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Nghệ An (Vinh)">Nghệ An (Vinh)</option>
+                        <option value="Huế">Huế</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="catFilter">Phân loại:</label>
+                    <select id="catFilter">
+                        <option value="all">Tất cả phân loại</option>
+                        <option value="Trung tâm Yoga">Trung tâm Yoga</option>
+                        <option value="Tổ chức Từ thiện / Xã hội">Tổ chức Từ thiện / Xã hội</option>
+                        <option value="Trung tâm Kỹ năng sống">Trung tâm Kỹ năng sống</option>
+                        <option value="Cơ quan / Tổ chức Văn hóa">Cơ quan / Tổ chức Văn hóa</option>
+                        <option value="Trường chuyên biệt / khuyết tật">Trường chuyên biệt / khuyết tật</option>
+                        <option value="Cơ sở sản xuất / Doanh nghiệp">Cơ sở sản xuất / Doanh nghiệp</option>
+                    </select>
+                </div>
+                <div class="filter-group search-group">
+                    <label for="searchBar">Tìm kiếm:</label>
+                    <input type="text" id="searchBar" placeholder="Tìm kiếm tên, địa chỉ, ghi chú...">
+                </div>
+            </div>
+            <div class="suggested-contacts-grid" id="suggestedContactsGrid">
+                <!-- Javascript will render suggested contacts cards here -->
+            </div>
+        </div>
+
+        <!-- Gallery Workspace -->
+        <div id="galleryWorkspace" style="display: none; margin-top: 1rem;">
+            <div class="gallery-action-bar" style="display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2rem;">
+                <div style="font-family: var(--font-display); font-size: 1.1rem; color: var(--text-muted);">
+                    Tổng số ảnh trong kho: <strong id="galleryCountVal" style="color: var(--accent-color);">0</strong> ảnh
+                </div>
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                    <a href="kho_anh_part1.zip" download="kho_anh_part1.zip" class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border-color: var(--accent-color); text-decoration: none; padding: 0.6rem 1.25rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; border-radius: 8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Tải Phần 1 (.zip)</span>
+                    </a>
+                    <a href="kho_anh_part2.zip" download="kho_anh_part2.zip" class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border-color: var(--accent-color); text-decoration: none; padding: 0.6rem 1.25rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; border-radius: 8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Tải Phần 2 (.zip)</span>
+                    </a>
+                    <a href="kho_anh_part3.zip" download="kho_anh_part3.zip" class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border-color: var(--accent-color); text-decoration: none; padding: 0.6rem 1.25rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; border-radius: 8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Tải Phần 3 (.zip)</span>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Javascript will render gallery items here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Sahaja Yoga là một phương pháp thiền định tự phát được sáng lập bởi bà <a href="https://www.shrimataji.org" target="_blank">Shri Mataji Nirmala Devi</a> vào năm 1970.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">Tất cả các lớp học và hoạt động hướng dẫn thiền định của Sahaja Yoga trên toàn thế giới đều hoàn toàn miễn phí vì cộng đồng.</p>
+        </footer>
+    </div>
+    </div>
+
+    <!-- Load letters data created by build_database.py -->
+    <script src="letters_data.js"></script>
+    <script>
+        // Auth check logic
+        function checkAuth() {
+            if (sessionStorage.getItem("isAuthorized") === "true") {
+                document.getElementById("loginScreen").style.display = "none";
+                document.getElementById("appContainer").style.display = "block";
+            } else {
+                document.getElementById("loginScreen").style.display = "flex";
+                document.getElementById("appContainer").style.display = "none";
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const password = document.getElementById("passwordInput").value;
+            if (password === "JSMwithLove") {
+                sessionStorage.setItem("isAuthorized", "true");
+                checkAuth();
+            } else {
+                const errorEl = document.getElementById("loginError");
+                errorEl.style.display = "block";
+                const inputEl = document.getElementById("passwordInput");
+                inputEl.style.borderColor = "#ef4444";
+                inputEl.value = "";
+                inputEl.focus();
+            }
+        }
+
+        // Run auth check immediately
+        checkAuth();
+
+        // State variables
+        let selectedCategoryEn = "School";
+        let selectedProgramType = "music_meditation";
+
+        // DOM elements
+        const categoryTabs = document.getElementById("categoryTabs");
+        const typeToggle = document.getElementById("typeToggle");
+        const durationVal = document.getElementById("durationVal");
+        const letterLabel = document.getElementById("letterLabel");
+        const letterSubject = document.getElementById("letterSubject");
+        const letterBody = document.getElementById("letterBody");
+        const btnCopy = document.getElementById("btnCopy");
+        const activityImg = document.getElementById("activityImg");
+        const imageCaption = document.getElementById("imageCaption");
+        const agendaTypeBadge = document.getElementById("agendaTypeBadge");
+        const agendaBody = document.getElementById("agendaBody");
+        
+        // Suggested Contacts DOM elements
+        const letterWorkspace = document.getElementById("letterWorkspace");
+        const suggestedContactsWorkspace = document.getElementById("suggestedContactsWorkspace");
+        const cityFilter = document.getElementById("cityFilter");
+        const catFilter = document.getElementById("catFilter");
+        const searchBar = document.getElementById("searchBar");
+        const suggestedContactsGrid = document.getElementById("suggestedContactsGrid");
+        const durationBadge = document.getElementById("durationBadge");
+
+        // Gallery DOM elements
+        const galleryWorkspace = document.getElementById("galleryWorkspace");
+        const galleryGrid = document.getElementById("galleryGrid");
+        const galleryCountVal = document.getElementById("galleryCountVal");
+
+        // Categories definitions
+        const categories = [
+            { en: "School", vi: "Trường học" },
+            { en: "Kindergarten", vi: "Trường mầm non" },
+            { en: "Office", vi: "Văn phòng / Doanh nghiệp" },
+            { en: "Gov Office", vi: "Cơ quan Nhà nước" },
+            { en: "Resort", vi: "Khu nghỉ dưỡng (Resort)" },
+            { en: "Hotel", vi: "Khách sạn" },
+            { en: "English Center", vi: "Trung tâm Tiếng Anh" },
+            { en: "SuggestedContacts", vi: "Liên hệ gợi ý 🌟" },
+            { en: "Gallery", vi: "Kho ảnh 📷" }
+        ];
+
+        // Initialize App
+        function init() {
+            if (typeof sahajaYogaData === 'undefined') {
+                console.error("Data source letters_data.js not loaded. Please run build_database.py first.");
+                document.body.innerHTML = `
+                    <div style="max-width: 600px; margin: 100px auto; text-align: center; font-family: sans-serif; background: #1e293b; padding: 2rem; border-radius: 12px; border: 1px solid #334155;">
+                        <h2 style="color: #ef4444; margin-bottom: 1rem;">Không thể tải dữ liệu</h2>
+                        <p style="color: #cbd5e1; line-height: 1.6;">Chưa tìm thấy tệp <code>letters_data.js</code>. <br>Bạn cần chạy kịch bản Python <code>build_database.py</code> để tạo cơ sở dữ liệu và xuất dữ liệu trước khi mở Dashboard.</p>
+                        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 1.5rem;">Sau khi chạy xong, hãy tải lại trang này (F5).</p>
+                    </div>
+                `;
+                return;
+            }
+
+            renderCategoryTabs();
+            updateContent();
+
+            // Set up event listeners
+            typeToggle.addEventListener("click", (e) => {
+                if (e.target.classList.contains("type-btn")) {
+                    Array.from(typeToggle.children).forEach(btn => btn.classList.remove("active"));
+                    e.target.classList.add("active");
+                    selectedProgramType = e.target.getAttribute("data-type");
+                    updateContent();
+                }
+            });
+
+            btnCopy.addEventListener("click", copyToClipboard);
+
+            // Listeners for filters
+            cityFilter.addEventListener("change", renderSuggestedContacts);
+            catFilter.addEventListener("change", renderSuggestedContacts);
+            searchBar.addEventListener("input", renderSuggestedContacts);
+        }
+
+        // Render category buttons
+        function renderCategoryTabs() {
+            categoryTabs.innerHTML = "";
+            categories.forEach(cat => {
+                const btn = document.createElement("button");
+                btn.className = `tab-btn ${cat.en === selectedCategoryEn ? 'active' : ''}`;
+                btn.textContent = cat.vi;
+                btn.setAttribute("data-cat", cat.en);
+                btn.addEventListener("click", () => {
+                    Array.from(categoryTabs.children).forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    selectedCategoryEn = cat.en;
+                    updateContent();
+                });
+                categoryTabs.appendChild(btn);
+            });
+        }
+
+        // Helper to highlight placeholder brackets in text
+        function highlightPlaceholders(text) {
+            // Replace [Placeholder] with span
+            return text.replace(/\[([^\]]+)\]/g, '<span class="placeholder-hl">[$1]</span>');
+        }
+
+        // Update UI based on selection
+        function updateContent() {
+            if (selectedCategoryEn === "SuggestedContacts") {
+                letterWorkspace.style.display = "none";
+                typeToggle.style.display = "none";
+                durationBadge.style.display = "none";
+                suggestedContactsWorkspace.style.display = "block";
+                galleryWorkspace.style.display = "none";
+                renderSuggestedContacts();
+                return;
+            } else if (selectedCategoryEn === "Gallery") {
+                letterWorkspace.style.display = "none";
+                typeToggle.style.display = "none";
+                durationBadge.style.display = "none";
+                suggestedContactsWorkspace.style.display = "none";
+                galleryWorkspace.style.display = "block";
+                renderGallery();
+                return;
+            } else {
+                letterWorkspace.style.display = "grid";
+                typeToggle.style.display = "flex";
+                durationBadge.style.display = "flex";
+                suggestedContactsWorkspace.style.display = "none";
+                galleryWorkspace.style.display = "none";
+            }
+
+            const letter = sahajaYogaData.letters.find(l => 
+                l.category_en === selectedCategoryEn && 
+                l.program_type === selectedProgramType
+            );
+
+            if (!letter) {
+                console.warn("Letter not found for:", selectedCategoryEn, selectedProgramType);
+                return;
+            }
+
+            // Update metadata
+            letterLabel.textContent = letter.category_vi;
+            letterSubject.innerHTML = highlightPlaceholders(letter.subject);
+            durationVal.textContent = letter.duration;
+            
+            // Body text with highlighted placeholders
+            letterBody.innerHTML = highlightPlaceholders(letter.content);
+
+            // Image
+            activityImg.src = letter.image_path;
+            activityImg.onerror = function() {
+                // Fallback if image not generated or missing
+                this.src = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80";
+            };
+            imageCaption.textContent = `Hoạt động thiền tại ${letter.category_vi.toLowerCase()}`;
+
+            // Agenda
+            agendaTypeBadge.textContent = selectedProgramType === "music_meditation" ? "Có âm nhạc & Thiền" : "Chỉ thiền định";
+            agendaBody.innerHTML = "";
+            letter.agenda.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td class="agenda-time">${item.time}</td>
+                    <td class="agenda-desc">${item.content}</td>
+                `;
+                agendaBody.appendChild(tr);
+            });
+        }
+
+        // Copy text to clipboard
+        function copyToClipboard() {
+            const letter = sahajaYogaData.letters.find(l => 
+                l.category_en === selectedCategoryEn && 
+                l.program_type === selectedProgramType
+            );
+
+            if (!letter) return;
+
+            const textToCopy = `TIÊU ĐỀ: ${letter.subject}\n\n${letter.content}`;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Visual feedback
+                const origText = btnCopy.innerHTML;
+                btnCopy.classList.add("success");
+                btnCopy.innerHTML = `
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Đã sao chép!</span>
+                `;
+
+                setTimeout(() => {
+                    btnCopy.classList.remove("success");
+                    btnCopy.innerHTML = origText;
+                }, 2000);
+            }).catch(err => {
+                console.error("Could not copy text: ", err);
+                alert("Không thể sao chép tự động. Hãy bôi đen văn bản và nhấn Ctrl+C.");
+            });
+        }
+
+        // Render suggested contacts list
+        function renderSuggestedContacts() {
+            const cityQuery = cityFilter.value;
+            const catQuery = catFilter.value;
+            const searchQuery = searchBar.value.toLowerCase().trim();
+
+            suggestedContactsGrid.innerHTML = "";
+
+            const filteredContacts = sahajaYogaData.suggested_contacts.filter(contact => {
+                const matchesCity = cityQuery === "all" || contact.city === cityQuery;
+                const matchesCat = catQuery === "all" || contact.category === catQuery;
+                const matchesSearch = searchQuery === "" || 
+                    contact.name.toLowerCase().includes(searchQuery) ||
+                    contact.address.toLowerCase().includes(searchQuery) ||
+                    (contact.notes && contact.notes.toLowerCase().includes(searchQuery)) ||
+                    (contact.phone && contact.phone.includes(searchQuery)) ||
+                    (contact.email && contact.email.toLowerCase().includes(searchQuery));
+                
+                return matchesCity && matchesCat && matchesSearch;
+            });
+
+            if (filteredContacts.length === 0) {
+                suggestedContactsGrid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-muted); border: 1px dashed var(--border-color); border-radius: 12px; background-color: var(--bg-secondary);">
+                        <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Không tìm thấy liên hệ nào</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Thử thay đổi bộ lọc hoặc từ khóa tìm kiếm khác.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filteredContacts.forEach(contact => {
+                const card = document.createElement("div");
+                card.className = "suggested-contact-card";
+                card.innerHTML = `
+                    <div class="sc-card-header">
+                        <span class="sc-city-badge">${contact.city}</span>
+                        <span class="sc-cat-badge">${contact.category}</span>
+                    </div>
+                    <div class="sc-name">${contact.name}</div>
+                    
+                    <div class="sc-info-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <strong>SĐT:</strong>
+                        <a href="tel:${contact.phone}">${contact.phone}</a>
+                    </div>
+                    
+                    <div class="sc-info-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <strong>Email:</strong>
+                        ${contact.email ? `<a href="mailto:${contact.email}">${contact.email}</a>` : '<span style="opacity:0.5;">N/A</span>'}
+                    </div>
+
+                    <div class="sc-info-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <strong>Địa chỉ:</strong>
+                        <span>${contact.address}</span>
+                    </div>
+
+                    ${contact.notes ? `<div class="sc-notes">${contact.notes}</div>` : ''}
+                `;
+                suggestedContactsGrid.appendChild(card);
+            });
+        }
+
+        // Render gallery grid
+        function renderGallery() {
+            galleryGrid.innerHTML = "";
+            const images = sahajaYogaData.gallery || [];
+            galleryCountVal.textContent = images.length;
+
+            if (images.length === 0) {
+                galleryGrid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-muted); border: 1px dashed var(--border-color); border-radius: 12px; background-color: var(--bg-secondary);">
+                        <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Kho ảnh trống</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Không tìm thấy ảnh nào trong thư mục 'kho anh'.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            images.forEach(imgName => {
+                const item = document.createElement("div");
+                item.className = "gallery-item";
+                
+                const encodedImg = encodeURIComponent(imgName);
+                
+                item.innerHTML = `
+                    <img src="kho anh/${encodedImg}" alt="${imgName}" loading="lazy">
+                    <div class="gallery-item-actions">
+                        <div class="gallery-img-name" title="${imgName}">${imgName}</div>
+                        <a href="kho anh/${encodedImg}" download="${imgName}" class="btn-gallery-download" title="Tải ảnh này về">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </a>
+                    </div>
+                `;
+                galleryGrid.appendChild(item);
+            });
+        }
+ 
+         // Run init on load
+         window.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
+</html>
