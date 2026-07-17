@@ -1,7 +1,7 @@
 const sahajaYogaData = {
   "letters": [
     {
-      "id": 99,
+      "id": 113,
       "category_vi": "Trường học (Đại học/Phổ thông)",
       "category_en": "School",
       "program_type": "music_meditation",
@@ -37,7 +37,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_school.png"
     },
     {
-      "id": 100,
+      "id": 114,
       "category_vi": "Trường học (Đại học/Phổ thông)",
       "category_en": "School",
       "program_type": "meditation_only",
@@ -69,7 +69,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_school.png"
     },
     {
-      "id": 101,
+      "id": 115,
       "category_vi": "Trường mầm non",
       "category_en": "Kindergarten",
       "program_type": "music_meditation",
@@ -105,7 +105,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_kindergarten.png"
     },
     {
-      "id": 102,
+      "id": 116,
       "category_vi": "Trường mầm non",
       "category_en": "Kindergarten",
       "program_type": "meditation_only",
@@ -137,7 +137,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_kindergarten.png"
     },
     {
-      "id": 103,
+      "id": 117,
       "category_vi": "Văn phòng / Doanh nghiệp",
       "category_en": "Office",
       "program_type": "music_meditation",
@@ -173,7 +173,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_office.png"
     },
     {
-      "id": 104,
+      "id": 118,
       "category_vi": "Văn phòng / Doanh nghiệp",
       "category_en": "Office",
       "program_type": "meditation_only",
@@ -205,7 +205,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_office.png"
     },
     {
-      "id": 105,
+      "id": 119,
       "category_vi": "Cơ quan Nhà nước",
       "category_en": "Gov Office",
       "program_type": "music_meditation",
@@ -237,7 +237,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_gov_office.png"
     },
     {
-      "id": 106,
+      "id": 120,
       "category_vi": "Cơ quan Nhà nước",
       "category_en": "Gov Office",
       "program_type": "meditation_only",
@@ -269,7 +269,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_gov_office.png"
     },
     {
-      "id": 107,
+      "id": 121,
       "category_vi": "Khu nghỉ dưỡng (Resort)",
       "category_en": "Resort",
       "program_type": "music_meditation",
@@ -305,7 +305,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_resort.png"
     },
     {
-      "id": 108,
+      "id": 122,
       "category_vi": "Khu nghỉ dưỡng (Resort)",
       "category_en": "Resort",
       "program_type": "meditation_only",
@@ -337,7 +337,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_resort.png"
     },
     {
-      "id": 109,
+      "id": 123,
       "category_vi": "Khách sạn",
       "category_en": "Hotel",
       "program_type": "music_meditation",
@@ -373,7 +373,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_hotel.png"
     },
     {
-      "id": 110,
+      "id": 124,
       "category_vi": "Khách sạn",
       "category_en": "Hotel",
       "program_type": "meditation_only",
@@ -401,7 +401,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_hotel.png"
     },
     {
-      "id": 111,
+      "id": 125,
       "category_vi": "Trung tâm Tiếng Anh",
       "category_en": "English Center",
       "program_type": "music_meditation",
@@ -437,7 +437,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_english_center.png"
     },
     {
-      "id": 112,
+      "id": 126,
       "category_vi": "Trung tâm Tiếng Anh",
       "category_en": "English Center",
       "program_type": "meditation_only",
@@ -889,22 +889,22 @@ const sahajaYogaData = {
     {
       "title": "Gửi sau cuộc gọi điện thoại (Tour thiền & ca nhạc)",
       "description": "Dùng để gửi Zalo cho đối tác sau khi bạn đã gọi điện giới thiệu sơ qua về chương trình.",
-      "content": "Chào [Tên người nhận],\n\nMình là [Tên của bạn] bên Sahaja Yoga. Vừa nãy mình có gọi điện trao đổi với bạn.\n\nĐây là website của bên mình để bạn tham khảo:\nhttps://lopthien.com/category/lop-hoc-thien\n\nSahaja Yoga là chương trình hướng dẫn thiền hoàn toàn miễn phí, được tổ chức bởi các tình nguyện viên với mong muốn mang thiền đến cộng đồng, giúp mọi người giảm căng thẳng và tìm lại sự cân bằng trong cuộc sống.\n\nTrong tháng 8, bên mình sẽ có một tour từ Hà Nội đến Đà Nẵng. Đoàn có các thành viên yogi đến từ nhiều quốc gia, cùng tham gia biểu diễn âm nhạc và hướng dẫn thiền cho cộng đồng. Đây là chương trình phi lợi nhuận và hoàn toàn miễn phí.\n\nNếu [Tên trung tâm/trường/đơn vị] thấy phù hợp, bên mình rất mong có cơ hội phối hợp tổ chức một buổi trải nghiệm thiền dành cho học viên hoặc cộng đồng.\n\nCảm ơn bạn rất nhiều. Nếu cần thêm thông tin, bạn cứ liên hệ với mình bất cứ lúc nào.\n\nChúc bạn một ngày tốt lành!\n\n[Tên của bạn]"
+      "content": "Chào [Tên người nhận],\n\nMình là [Tên của bạn] bên Sahaja Yoga. Vừa nãy mình có gọi điện trao đổi với bạn.\n\nĐây là website của bên mình để bạn tham khảo:\nhttps://lopthien.com/\n\nSahaja Yoga là chương trình hướng dẫn thiền hoàn toàn miễn phí, được tổ chức bởi các tình nguyện viên với mong muốn mang thiền đến cộng đồng, giúp mọi người giảm căng thẳng và tìm lại sự cân bằng trong cuộc sống.\n\nTrong tháng 8, bên mình sẽ có một tour từ Hà Nội đến Đà Nẵng. Đoàn có các thành viên yogi đến từ nhiều quốc gia, cùng tham gia biểu diễn âm nhạc và hướng dẫn thiền cho cộng đồng. Đây là chương trình phi lợi nhuận và hoàn toàn miễn phí.\n\nNếu [Tên trung tâm/trường/đơn vị] thấy phù hợp, bên mình rất mong có cơ hội phối hợp tổ chức một buổi trải nghiệm thiền dành cho học viên hoặc cộng đồng.\n\nCảm ơn bạn rất nhiều. Nếu cần thêm thông tin, bạn cứ liên hệ với mình bất cứ lúc nào.\n\nChúc bạn một ngày tốt lành!\n\n[Tên của bạn]"
     },
     {
       "title": "Tiếp cận nhanh qua tin nhắn Zalo (Chưa gọi điện)",
       "description": "Mẫu tin nhắn ngắn gọn để làm quen ban đầu với người phụ trách khi chưa có dịp gọi điện thoại.",
-      "content": "Chào bạn, mình là [Tên của bạn] từ chương trình thiền cộng đồng Sahaja Yoga Việt Nam.\n\nBên mình đang tổ chức chuỗi lớp học trải nghiệm thiền và biểu diễn âm nhạc dân gian quốc tế hoàn toàn miễn phí và phi lợi nhuận cho cộng đồng trong tháng 8 này.\n\nBiết đến [Tên trung tâm] là đơn vị rất năng động và quan tâm đến sức khỏe tinh thần, mình xin gửi bạn trang giới thiệu chi tiết về hoạt động này để tham khảo:\nhttps://lopthien.com/category/lop-hoc-thien\n\nNếu bên mình có cơ hội phối hợp tổ chức một buổi trải nghiệm thiền định (khoảng 60 phút) giúp học viên hoặc nhân viên của trung tâm giải tỏa căng thẳng thì thật tuyệt vời.\n\nRất mong nhận được phản hồi từ bạn. Cảm ơn bạn và chúc bạn một ngày tốt lành!\n\n[Tên của bạn] - [Số điện thoại]"
+      "content": "Chào bạn, mình là [Tên của bạn] từ chương trình thiền cộng đồng Sahaja Yoga Việt Nam.\n\nBên mình đang tổ chức chuỗi lớp học trải nghiệm thiền và biểu diễn âm nhạc dân gian quốc tế hoàn toàn miễn phí và phi lợi nhuận cho cộng đồng trong tháng 8 này.\n\nBiết đến [Tên trung tâm] là đơn vị rất năng động và quan tâm đến sức khỏe tinh thần, mình xin gửi bạn trang giới thiệu chi tiết về hoạt động này để tham khảo:\nhttps://lopthien.com/\n\nNếu bên mình có cơ hội phối hợp tổ chức một buổi trải nghiệm thiền định (khoảng 60 phút) giúp học viên hoặc nhân viên của trung tâm giải tỏa căng thẳng thì thật tuyệt vời.\n\nRất mong nhận được phản hồi từ bạn. Cảm ơn bạn và chúc bạn một ngày tốt lành!\n\n[Tên của bạn] - [Số điện thoại]"
     },
     {
       "title": "Giới thiệu chương trình Thiền học đường (Trường học / Trung tâm kỹ năng)",
       "description": "Mẫu thư giới thiệu qua tin nhắn gửi cho hiệu trưởng, hiệu phó, ban giám hiệu hoặc quản lý trung tâm tiếng Anh, trung tâm kỹ năng.",
-      "content": "Kính gửi [Tên người nhận/Ban giám hiệu],\n\nTôi là [Tên của bạn], đại diện ban dự án Thiền học đường Sahaja Yoga.\n\nNhằm hỗ trợ các em học sinh/sinh viên rèn luyện sự tập trung, xoa dịu áp lực học tập và phát triển trí tuệ cảm xúc (EQ), Sahaja Yoga phối hợp cùng các tình nguyện viên quốc tế tổ chức các buổi hướng dẫn thiền kết hợp âm nhạc hoàn toàn miễn phí cho các cơ sở giáo dục.\n\nChúng tôi rất mong muốn được đồng hành cùng nhà trường trong việc tổ chức một buổi trải nghiệm thiền khoa học (thời lượng khoảng 45-60 phút). Kính gửi nhà trường trang thông tin giới thiệu chi tiết để tham khảo:\nhttps://lopthien.com/category/lop-hoc-thien\n\nRất mong nhận được phản hồi quý báu từ thầy/cô. Xin kính chúc thầy/cô sức khỏe và công tác tốt!\n\n[Tên của bạn] - [Số điện thoại]"
+      "content": "Kính gửi [Tên người nhận/Ban giám hiệu],\n\nTôi là [Tên của bạn], đại diện ban dự án Thiền học đường Sahaja Yoga.\n\nNhằm hỗ trợ các em học sinh/sinh viên rèn luyện sự tập trung, xoa dịu áp lực học tập và phát triển trí tuệ cảm xúc (EQ), Sahaja Yoga phối hợp cùng các tình nguyện viên quốc tế tổ chức các buổi hướng dẫn thiền kết hợp âm nhạc hoàn toàn miễn phí cho các cơ sở giáo dục.\n\nChúng tôi rất mong muốn được đồng hành cùng nhà trường trong việc tổ chức một buổi trải nghiệm thiền khoa học (thời lượng khoảng 45-60 phút). Kính gửi nhà trường trang thông tin giới thiệu chi tiết để tham khảo:\nhttps://lopthien.com/\n\nRất mong nhận được phản hồi quý báu từ thầy/cô. Xin kính chúc thầy/cô sức khỏe và công tác tốt!\n\n[Tên của bạn] - [Số điện thoại]"
     },
     {
       "title": "Giới thiệu chương trình Thiền công sở (Văn phòng / Doanh nghiệp)",
       "description": "Mẫu tin nhắn gửi cho bộ phận nhân sự (HR), quản lý hoặc công đoàn của doanh nghiệp/nhà máy.",
-      "content": "Chào [Tên người nhận/Bộ phận nhân sự],\n\nMình là [Tên của bạn] từ ban dự án Wellness Sahaja Yoga Việt Nam.\n\nNhằm hỗ trợ chăm sóc sức khỏe tinh thần và giảm tải căng thẳng (stress) cho cán bộ nhân viên, bên mình đang đồng hành cùng các doanh nghiệp tổ chức hoạt động trải nghiệm thiền định thư giãn tại văn phòng (Corporate Wellness).\n\nĐây là chương trình cộng đồng phi lợi nhuận, được hướng dẫn bởi các chuyên gia trong và ngoài nước và hoàn toàn miễn phí. Bạn có thể xem chi tiết thông tin hoạt động tại:\nhttps://lopthien.com/category/lop-hoc-thien\n\nNếu công ty quan tâm đến hoạt động trải nghiệm bổ ích này (thời gian linh hoạt 45 - 60 phút), rất mong tụi mình có cơ hội kết nối hỗ trợ.\n\nCảm ơn bạn và chúc công ty một tuần làm việc hiệu quả!\n\n[Tên của bạn] - [Số điện thoại]"
+      "content": "Chào [Tên người nhận/Bộ phận nhân sự],\n\nMình là [Tên của bạn] từ ban dự án Wellness Sahaja Yoga Việt Nam.\n\nNhằm hỗ trợ chăm sóc sức khỏe tinh thần và giảm tải căng thẳng (stress) cho cán bộ nhân viên, bên mình đang đồng hành cùng các doanh nghiệp tổ chức hoạt động trải nghiệm thiền định thư giãn tại văn phòng (Corporate Wellness).\n\nĐây là chương trình cộng đồng phi lợi nhuận, được hướng dẫn bởi các chuyên gia trong và ngoài nước và hoàn toàn miễn phí. Bạn có thể xem chi tiết thông tin hoạt động tại:\nhttps://lopthien.com/\n\nNếu công ty quan tâm đến hoạt động trải nghiệm bổ ích này (thời gian linh hoạt 45 - 60 phút), rất mong tụi mình có cơ hội kết nối hỗ trợ.\n\nCảm ơn bạn và chúc công ty một tuần làm việc hiệu quả!\n\n[Tên của bạn] - [Số điện thoại]"
     }
   ]
 };
