@@ -1,7 +1,7 @@
 const sahajaYogaData = {
   "letters": [
     {
-      "id": 113,
+      "id": 127,
       "category_vi": "Trường học (Đại học/Phổ thông)",
       "category_en": "School",
       "program_type": "music_meditation",
@@ -37,7 +37,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_school.png"
     },
     {
-      "id": 114,
+      "id": 128,
       "category_vi": "Trường học (Đại học/Phổ thông)",
       "category_en": "School",
       "program_type": "meditation_only",
@@ -69,7 +69,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_school.png"
     },
     {
-      "id": 115,
+      "id": 129,
       "category_vi": "Trường mầm non",
       "category_en": "Kindergarten",
       "program_type": "music_meditation",
@@ -105,7 +105,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_kindergarten.png"
     },
     {
-      "id": 116,
+      "id": 130,
       "category_vi": "Trường mầm non",
       "category_en": "Kindergarten",
       "program_type": "meditation_only",
@@ -137,7 +137,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_kindergarten.png"
     },
     {
-      "id": 117,
+      "id": 131,
       "category_vi": "Văn phòng / Doanh nghiệp",
       "category_en": "Office",
       "program_type": "music_meditation",
@@ -173,7 +173,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_office.png"
     },
     {
-      "id": 118,
+      "id": 132,
       "category_vi": "Văn phòng / Doanh nghiệp",
       "category_en": "Office",
       "program_type": "meditation_only",
@@ -205,7 +205,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_office.png"
     },
     {
-      "id": 119,
+      "id": 133,
       "category_vi": "Cơ quan Nhà nước",
       "category_en": "Gov Office",
       "program_type": "music_meditation",
@@ -237,7 +237,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_gov_office.png"
     },
     {
-      "id": 120,
+      "id": 134,
       "category_vi": "Cơ quan Nhà nước",
       "category_en": "Gov Office",
       "program_type": "meditation_only",
@@ -269,7 +269,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_gov_office.png"
     },
     {
-      "id": 121,
+      "id": 135,
       "category_vi": "Khu nghỉ dưỡng (Resort)",
       "category_en": "Resort",
       "program_type": "music_meditation",
@@ -305,7 +305,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_resort.png"
     },
     {
-      "id": 122,
+      "id": 136,
       "category_vi": "Khu nghỉ dưỡng (Resort)",
       "category_en": "Resort",
       "program_type": "meditation_only",
@@ -337,7 +337,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_resort.png"
     },
     {
-      "id": 123,
+      "id": 137,
       "category_vi": "Khách sạn",
       "category_en": "Hotel",
       "program_type": "music_meditation",
@@ -373,7 +373,39 @@ const sahajaYogaData = {
       "image_path": "images/sy_hotel.png"
     },
     {
-      "id": 124,
+      "id": 138,
+      "category_vi": "Tổ chức Yoga",
+      "category_en": "YogaCenter",
+      "program_type": "music_meditation",
+      "subject": "Thư ngỏ đề xuất tổ chức Chương trình Âm nhạc Trị liệu & Giao lưu Thiền định Khai mở Năng lượng (Workshop MIỄN PHÍ)",
+      "content": "Kính gửi: Ban Giám đốc / Người sáng lập [Tên Tổ Chức Yoga / Studio]\n\nLời đầu tiên, Sahaja Yoga Việt Nam xin gửi tới Quý Trung tâm lời chào trân trọng, lời chúc phát triển và luôn mang lại những giá trị sức khỏe bền vững cho cộng đồng!\n\nTừ góc độ cốt lõi, Yoga có nghĩa là \"sự hợp nhất\" của tâm trí, cơ thể và linh hồn. Trong tinh thần ấy, Sahaja Yoga - một phương pháp thiền định do Shri Mataji Nirmala Devi sáng lập, tập trung vào việc đánh thức năng lượng tự nhiên Kundalini một cách nhẹ nhàng (spontaneous) nhằm đạt tới sự khai sáng tự nhiên (Self-Realization). Nhằm làm phong phú thêm hành trình thực hành Yoga của các học viên tại Trung tâm, chúng tôi trân trọng đề xuất hợp tác tổ chức một buổi Workshop giao lưu đặc biệt mang chủ đề: “Âm nhạc Trị liệu & Khai mở Năng lượng”.\n\nChương trình là sự hòa quyện giữa không gian tĩnh tại của thiền định và năng lượng chữa lành của âm nhạc truyền thống, với sự góp mặt của nhóm nghệ sĩ tình nguyện quốc tế đến từ Ấn Độ:\n1. Thưởng thức âm nhạc chữa lành: Lắng nghe âm điệu mộc mạc của sáo Flute, trống Tabla có tần số rung động đồng điệu với các luân xa (Chakras).\n2. Trải nghiệm năng lượng Kundalini: Hướng dẫn học viên cách nhận biết sự luân chuyển của năng lượng Kundalini trên đầu ngón tay dưới dạng làn gió mát/ấm (cool breeze), minh chứng cho sự hợp nhất năng lượng.\n3. Giao lưu tinh thần cởi mở: Gắn kết cộng đồng học viên thông qua âm nhạc vui tươi và chia sẻ kiến thức về hệ thống năng lượng tinh tế.\n\nChúng tôi cam kết đây là chương trình tình nguyện, không thu phí đối với cả Trung tâm và Học viên, đồng thời tôn trọng tối đa phong cách và không gian tu tập của Quý Trung tâm.\n\nThời gian tổ chức: Một buổi cuối tuần (dự kiến trong khoảng từ ngày... đến...).\nĐịa điểm: Phòng tập chính của Trung tâm.\nĐối tượng: Các học viên đang theo học Yoga, huấn luyện viên và những người yêu thích thiền định.\n\nRất mong nhận được sự đồng thuận và hợp tác từ Quý Trung tâm để mang món quà tinh thần ý nghĩa này đến cộng đồng Yogi.\n\nTrân trọng kính chào!\n\nĐại diện Sahaja Yoga Việt Nam\n[Tên và Số điện thoại liên hệ]",
+      "duration": "90 - 120 phút",
+      "agenda": [
+        {
+          "time": "10 phút",
+          "content": "Đón tiếp học viên Yoga, giao lưu mở đầu, giới thiệu ý nghĩa của sự hợp nhất (Yoga) trong âm nhạc và tĩnh lặng."
+        },
+        {
+          "time": "20 phút",
+          "content": "Hòa nhạc mộc (Acoustic) với nhạc cụ cổ điển phương Đông: Sáo Flute và Tabla giúp đả thông kinh mạch."
+        },
+        {
+          "time": "30 phút",
+          "content": "Hướng dẫn phương pháp đánh thức Kundalini (Năng lượng Tâm linh) thông qua các bước thiền Sahaja Yoga đơn giản."
+        },
+        {
+          "time": "20 phút",
+          "content": "Biểu diễn âm nhạc dân gian Ấn Độ (Bhajan/Qawwali) nhịp điệu nhanh, lan tỏa năng lượng tích cực, nhảy múa tập thể."
+        },
+        {
+          "time": "10 phút",
+          "content": "Cảm nhận sự tĩnh lặng tuyệt đối (Nirvichara Samadhi) và chia sẻ trải nghiệm chữa lành."
+        }
+      ],
+      "image_path": "images/sy_resort.png"
+    },
+    {
+      "id": 139,
       "category_vi": "Khách sạn",
       "category_en": "Hotel",
       "program_type": "meditation_only",
@@ -401,7 +433,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_hotel.png"
     },
     {
-      "id": 125,
+      "id": 140,
       "category_vi": "Trung tâm Tiếng Anh",
       "category_en": "English Center",
       "program_type": "music_meditation",
@@ -437,7 +469,7 @@ const sahajaYogaData = {
       "image_path": "images/sy_english_center.png"
     },
     {
-      "id": 126,
+      "id": 141,
       "category_vi": "Trung tâm Tiếng Anh",
       "category_en": "English Center",
       "program_type": "meditation_only",

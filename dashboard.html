@@ -696,9 +696,8 @@
                 <h1>Sahaja Yoga Việt Nam</h1>
                 <p>Hệ thống Quản lý & Biên tập Thư ngỏ Chương trình Cộng đồng</p>
             </div>
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                <span>CSDL Đang Hoạt Động (SQLite)</span>
+            <div class="logo-right">
+                <img src="SY Logo.png" alt="SYVN Logo" style="max-height: 60px; width: auto; object-fit: contain;">
             </div>
         </header>
 
@@ -875,7 +874,7 @@
                         <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">ThuNgo_blank _WithLogo.docx</p>
                         <div style="display: flex; gap: 0.5rem; justify-content: center;">
                             <a href="downloads/ThuNgo_blank _WithLogo.docx" download class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border: none; text-decoration: none;">Tải về</a>
-                            <a href="https://docs.google.com/viewer?url=https://sahajayogavntour.github.io/thungo/downloads/ThuNgo_blank _WithLogo.docx" target="_blank" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</a>
+                            <button onclick="openDocModal('ThuNgo_blank _WithLogo.docx')" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</button>
                         </div>
                     </div>
                     
@@ -886,7 +885,7 @@
                         <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">ThuNgo_blank.docx</p>
                         <div style="display: flex; gap: 0.5rem; justify-content: center;">
                             <a href="downloads/ThuNgo_blank.docx" download class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border: none; text-decoration: none;">Tải về</a>
-                            <a href="https://docs.google.com/viewer?url=https://sahajayogavntour.github.io/thungo/downloads/ThuNgo_blank.docx" target="_blank" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</a>
+                            <button onclick="openDocModal('ThuNgo_blank.docx')" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</button>
                         </div>
                     </div>
 
@@ -897,7 +896,7 @@
                         <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">ThuNgo_BenhVienDakhoaHoaVang_WithLogo.docx</p>
                         <div style="display: flex; gap: 0.5rem; justify-content: center;">
                             <a href="downloads/ThuNgo_BenhVienDakhoaHoaVang_WithLogo.docx" download class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border: none; text-decoration: none;">Tải về</a>
-                            <a href="https://docs.google.com/viewer?url=https://sahajayogavntour.github.io/thungo/downloads/ThuNgo_BenhVienDakhoaHoaVang_WithLogo.docx" target="_blank" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</a>
+                            <button onclick="openDocModal('ThuNgo_BenhVienDakhoaHoaVang_WithLogo.docx')" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</button>
                         </div>
                     </div>
 
@@ -908,7 +907,7 @@
                         <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">ThuNgo_DaiHocYDuocHue_WithLogo.docx</p>
                         <div style="display: flex; gap: 0.5rem; justify-content: center;">
                             <a href="downloads/ThuNgo_DaiHocYDuocHue_WithLogo.docx" download class="btn-copy" style="background-color: var(--accent-color); color: var(--bg-primary); border: none; text-decoration: none;">Tải về</a>
-                            <a href="https://docs.google.com/viewer?url=https://sahajayogavntour.github.io/thungo/downloads/ThuNgo_DaiHocYDuocHue_WithLogo.docx" target="_blank" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</a>
+                            <button onclick="openDocModal('ThuNgo_DaiHocYDuocHue_WithLogo.docx')" class="btn-copy" style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none;">Xem trực tiếp</button>
                         </div>
                     </div>
                 </div>
@@ -923,8 +922,21 @@
     </div>
     </div>
 
+    <!-- Document Modal -->
+    <div id="docModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(11, 15, 25, 0.85); z-index: 10000; align-items: center; justify-content: center; padding: 2rem;">
+        <div style="background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px; width: 100%; max-width: 800px; height: 90vh; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+            <div style="padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <h3 id="docModalTitle" style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-main); margin: 0;">Tiêu đề</h3>
+                <button onclick="document.getElementById('docModal').style.display='none'" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.5rem;">&times;</button>
+            </div>
+            <div id="docModalContent" style="padding: 2rem; overflow-y: auto; flex-grow: 1; white-space: pre-wrap; font-size: 1rem; color: #333; line-height: 1.6; background-color: white;">
+            </div>
+        </div>
+    </div>
+
     <!-- Load letters data created by build_database.py -->
     <script src="letters_data.js"></script>
+    <script src="downloads_data.js"></script>
     <script>
         // Auth check logic
         function checkAuth() {
@@ -1007,11 +1019,29 @@
             { en: "Resort", vi: "Khu nghỉ dưỡng (Resort)" },
             { en: "Hotel", vi: "Khách sạn" },
             { en: "English Center", vi: "Trung tâm Tiếng Anh" },
+            { en: "YogaCenter", vi: "Tổ chức Yoga" },
             { en: "SuggestedContacts", vi: "Liên hệ gợi ý 🌟" },
             { en: "MessageTemplates", vi: "Mẫu tin nhắn 💬" },
             { en: "Gallery", vi: "Kho ảnh 📷" },
-            { en: "Downloads", vi: "Tải Thư ngỏ 📄" }
+            { en: "Downloads", vi: "Mẫu thư đã gửi ĐN 📄" }
         ];
+
+        // Document Modal Logic
+        function openDocModal(filename) {
+            const titleEl = document.getElementById("docModalTitle");
+            const contentEl = document.getElementById("docModalContent");
+            const modalEl = document.getElementById("docModal");
+            
+            titleEl.textContent = filename;
+            
+            if (typeof downloadsData !== 'undefined' && downloadsData[filename]) {
+                contentEl.textContent = downloadsData[filename];
+            } else {
+                contentEl.textContent = "Đang tải dữ liệu hoặc không tìm thấy nội dung của văn bản này...";
+            }
+            
+            modalEl.style.display = "flex";
+        }
 
         // State variables
         let selectedMsgTemplateIdx = 0;
